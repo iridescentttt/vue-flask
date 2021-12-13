@@ -6,19 +6,19 @@
 >
 <script>
 export default {
-  name: "App",
-  data() {
-    return { datetime: "eeeeeee" };
+  name: 'App',
+  data () {
+    return { datetime: 'ee' }
   },
   methods: {
-    initData() {
-      this.$ajax.get("/time", {}).then(res => {
-        this.datetime = res.data.time;
-      });
+    initData () {
+      this.$ajax.get('/time', {}).then(res => {
+        this.datetime = res.data.time
+      })
     }
   },
-  mounted() {
-    this.initData();
+  mounted () {
+    this.initData()
   }
 }
 </script>

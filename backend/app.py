@@ -4,12 +4,15 @@ from flask_cors import CORS
 import time
 
 app = Flask(__name__)
+app.config['DEBUG'] = True
 
 CORS(app, supports_credentials=True)
+
 
 @app.route('/')
 def hello_world():
     return 'Hello World!'
+
 
 @app.route('/getMsg', methods=['GET', 'POST'])
 def home():
@@ -18,9 +21,11 @@ def home():
     }
     return jsonify(response)
 
+
 @app.route('/time')
-def get_current_time():    
-    return {'time': time.time()}
+def get_current_time():
+    return {'time': "fuck hhy"}
+# @app.route
 
 # 启动运行
 if __name__ == '__main__':
